@@ -1,0 +1,67 @@
+*{
+padding: 0;
+margin: 0 !important;
+}
+
+
+.App{
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+
+  min-height: 100vh;
+
+}
+
+.tape{
+  background-color: white;
+  color: #727070;
+  margin-bottom: 0.1%;  
+  vertical-align: bottom;
+  border-bottom: 100%;
+  border-bottom: #000;
+
+}
+
+.topnav {
+
+  overflow: hidden;
+  background-color: #fff;
+  height: 15% !important;
+  color: black !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav a:hover {
+  color: #aab;
+}
+
+.right-top {
+  padding-top: 0.5%;
+  gap: 3px;
+  place-content: end;
+  display: flex;
+
+}
+
+.left-top{
+  color:#727070;
+}
+
+.logo-css{
+ font-weight: lighter;
+}
+
+.homepage-pic{
+  
+}
