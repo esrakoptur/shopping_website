@@ -65,7 +65,7 @@ const Navbar = () => {
               <div className="offcanvas-body">
               <a href="/">Home</a>
                 <a href="/products"> All Products</a>
-                <a href="/shoes"> Contact US</a>
+                <a href="mailto: basics@info.com">Contact US</a>
                 <a href="/user"> Login</a>
                 <a href="/favs"> Favorites</a>
                 <a href="/cart"> Shopping Cart</a>

@@ -8,13 +8,13 @@ import Shoes from "./pages/Shoes"
 import Cart from "./pages/Cart"
 import Navbar  from "./components/Navbar";
 import Favs from "./pages/Favs";
+import Closeup from "./pages/Closeup";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        
         <Route path="/products" element={<Products /> }/>
         <Route path ="/user" element={<User/>}/>
         <Route path ="/tops" element={<Tops/>}/>
@@ -22,6 +22,8 @@ function App() {
         <Route path ="/shoes" element={<Shoes/>}/>
         <Route path ="/cart" element={<Cart/>}/>
         <Route path ="/favs" element={<Favs/>}/>
+        <Route path ="/closeup/:id" element={<Closeup/>}/>
+
       </Routes>
     </BrowserRouter>
   );
