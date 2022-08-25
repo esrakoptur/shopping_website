@@ -20,7 +20,7 @@ const Products = () => {
       <div> ALL PRODUCTS </div>
 
       <div className="d-flex flex-wrap gap-3 p-3 justify-content-center">
-   {   products.map((item) => <Card key={item.id} {...item} />)}
+   {  products.map((item) => <Card key={item.id} {...item} />)}
      
       </div>
     </div>

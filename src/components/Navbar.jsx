@@ -1,4 +1,14 @@
+import { useState, useEffect } from "react";
+import { GetAllCategories } from "../api";
+
 const Navbar = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    GetAllCategories().then((result) => {setCategories(result)});
+   
+  }, []);
+  console.log(categories)
   return (
     <div className="text-center">
       <div className="tape text-center">
@@ -16,9 +26,7 @@ const Navbar = () => {
             <div className="dropdown">
               <a href="/products">All Products</a>
               <div className="dropdown-content">
-                <a href="/tops">Tops</a>
-                <a href="/jeans"> Jeans</a>
-                <a href="/shoes"> Shoes</a>
+                {categories.map((item) =>   <a href={`/${item.replace(/\s/g, '')}`}>{ item}</a>)}
               </div>
             </div>
             <a href="mailto: basics@info.com">Contact Us</a>
@@ -44,7 +52,7 @@ const Navbar = () => {
               data-bs-target="#offcanvasLeft"
               aria-controls="offcanvasLeft"
             >
-             <img width={"40px"} height={"40px"} src="/menu.svg" />
+              <img width={"40px"} height={"40px"} src="/menu.svg" />
             </button>
 
             <div
@@ -63,7 +71,7 @@ const Navbar = () => {
                 ></button>
               </div>
               <div className="offcanvas-body">
-              <a href="/">Home</a>
+                <a href="/">Home</a>
                 <a href="/products"> All Products</a>
                 <a href="mailto: basics@info.com">Contact US</a>
                 <a href="/user"> Login</a>
