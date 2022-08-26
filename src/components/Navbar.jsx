@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { GetAllCategories } from "../api";
+import Search from "./Search";
 
 const Navbar = () => {
   const [categories, setCategories] = useState([]);
@@ -8,7 +9,7 @@ const Navbar = () => {
     GetAllCategories().then((result) => {setCategories(result)});
    
   }, []);
-  console.log(categories)
+
   return (
     <div className="text-center">
       <div className="tape text-center">
@@ -26,7 +27,7 @@ const Navbar = () => {
             <div className="dropdown">
               <a href="/products">All Products</a>
               <div className="dropdown-content">
-                {categories.map((item) =>   <a href={`/${item.replace(/\s/g, '')}`}>{ item}</a>)}
+                {categories.map((item) =>   <a key={item} href={`/${item.replace(/\s/g, '')}`}>{ item}</a>)}
               </div>
             </div>
             <a href="mailto: basics@info.com">Contact Us</a>
@@ -99,55 +100,7 @@ const Navbar = () => {
               <img width={"40px"} height={"40px"} src="/user.svg" />
             </a>
           </div>
-          <button
-            className="menu-button"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasTop"
-            aria-controls="offcanvasTop"
-          >
-            <a>
-              <img width={"40px"} height={"40px"} src="/search.svg" />{" "}
-            </a>
-          </button>
-          <div
-            className="offcanvas offcanvas-top"
-            tabIndex={-1}
-            id="offcanvasTop"
-            aria-labelledby="offcanvasTopLabel"
-            data-bs-scroll="true"
-          >
-            <div className="offcanvas-header">
-              <h5 id="offcanvasTopLabel"></h5>
-              <button
-                type="button"
-                className="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-
-            <div className="offcanvas-body d-contents">
-              <div className="input-card">
-                <div className="input-card-form">
-                  <input
-                    type="text"
-                    className="form-control form-control-lg"
-                    name="s"
-                    placeholder="Search for items.."
-                    aria-label="Search for items.."
-                  />
-                  <input type="hidden" name="post_type" value="product" />
-                </div>
-
-                <div>
-                  <button type="submit" className="btn btn-dark btn-lg">
-                    Search
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+           <Search />
         </div>
       </div>
     </div>

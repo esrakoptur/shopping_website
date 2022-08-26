@@ -18,7 +18,7 @@ const Jewelery = () => {
                 <Navbar />
             </div>
             <div className="d-flex gap-3 justify-content-center">
-                { jewelery.map((item) => <Card {...item} />)  }
+                { jewelery.map((item) => <Card key={item} {...item} />)  }
             </div>
         </div>
     )

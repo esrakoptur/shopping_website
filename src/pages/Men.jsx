@@ -21,7 +21,7 @@ const Men= () => {
             </div>
 
             <div className="d-flex gap-3 justify-content-center">
-                {  mensclothing.map((item) => <Card {...item} />)  }
+                {  mensclothing.map((item) => <Card key={item} {...item} />)  }
             </div>
 
         </div>

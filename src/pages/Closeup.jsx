@@ -29,7 +29,7 @@ const Closeup = () => {
                         <div className="card-body">
                         <h5 className="card-title">{product.title}</h5>
                         <br/>
-                        <p className="price"> ${product.price}</p>
+                        <p className="price">{product.price} TL</p>
                         <br/>
                         <p className="card-text">{product.description}</p>
                         <small>from: {product.category}</small>

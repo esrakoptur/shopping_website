@@ -20,7 +20,7 @@ const Women= () => {
                 <Navbar />
             </div>
             <div className="d-flex gap-3 justify-content-center">
-                { womensclothing.map((item) => <Card {...item} />)  }
+                { womensclothing.map((item) => <Card key={item} {...item} />)  }
             </div>
         </div>
     )

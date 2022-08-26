@@ -44,9 +44,27 @@ margin: 0% !important;
 padding: 0% !important;
 }
 
+
 .offcanvas-body{
   display: contents;
   align-items: center;
+}
+
+.offcanvas{
+  height: fit-content !important;
+  align-items: center;
+}
+
+/*
+.offcanvas-backdrop{
+  height: fit-content;
+  background-color: white;
+}
+*/
+.matches{
+  display: contents;
+  display: block !important;
+  align-items: center !important;
 }
 
 .App {

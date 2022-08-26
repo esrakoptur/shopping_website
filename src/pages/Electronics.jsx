@@ -20,7 +20,7 @@ const Electronics = () => {
             <Navbar />
         </div>
         <div className="d-flex gap-3 justify-content-center">
-                { electronics.map((item) => <Card {...item} />)  }
+                { electronics.map((item) => <Card key={item} {...item} />)  }
             </div>
 
         </div>
